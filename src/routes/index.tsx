@@ -1,24 +1,30 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Community, Footer, Hero, Nav, Organizers, Speakers, Sponsors, Tickets, Venue } from "@/components/kcd/Sections";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "KCD Pune — Kubernetes Community Days Pune" },
+      { name: "description", content: "Kubernetes Community Days Pune: practical cloud-native insights, open-source conversations and community-driven learning." },
+      { property: "og:title", content: "KCD Pune — Kubernetes Community Days Pune" },
+      { property: "og:description", content: "KCD चा कट्टा, Cloud Native च्या गप्पा! Join Pune's Kubernetes community." },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main>
+      <Nav />
+      <Hero />
+      <Community />
+      <Tickets />
+      <Speakers />
+      <Organizers />
+      <Sponsors />
+      <Venue />
+      <Footer />
+    </main>
   );
 }
