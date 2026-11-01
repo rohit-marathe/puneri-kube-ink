@@ -49,23 +49,6 @@ export function Hero() {
   );
 }
 
-export function Community() {
-  return (
-    <section id="community" className="border-b border-border py-24">
-      <div className={wrap}>
-        <SectionHead num="02" title="The Community Behind KCD" sub="From big-stage moments to local community meetups, these are the people, experiences, and connections that keep Pune's cloud-native community growing." />
-      </div>
-      <div className="flex snap-x gap-5 overflow-x-auto px-6 pb-4">
-        {Array.from({ length: 7 }).map((_, i) => (
-          <motion.div key={i} whileHover={{ y: -6 }} className="snap-start shrink-0">
-            <Soon label="Community photo coming soon" className={`${i % 2 ? "h-72 w-64" : "h-72 w-96"} rounded-sm`} />
-          </motion.div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 export function Tickets() {
   return (
     <section id="tickets" className="border-b border-border bg-primary py-24 text-primary-foreground">

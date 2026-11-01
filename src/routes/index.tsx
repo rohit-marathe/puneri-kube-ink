@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Community, Footer, Hero, Nav, Organizers, Speakers, Sponsors, Tickets, Venue } from "@/components/kcd/Sections";
+import { Community } from "@/components/kcd/Community";
+import { Footer, Hero, Nav, Organizers, Speakers, Sponsors, Tickets, Venue } from "@/components/kcd/Sections";
 
 export const Route = createFileRoute("/")({
   head: () => ({
