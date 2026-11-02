@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Community } from "@/components/kcd/Community";
 import { Footer, Hero, Nav, Organizers, Speakers, Sponsors, Tickets, Venue } from "@/components/kcd/Sections";
+import { PuneMetroHero } from "@/components/kcd/PuneMetroHero";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -18,6 +19,7 @@ function Index() {
   return (
     <main>
       <Nav />
+      <PuneMetroHero />
       <Hero />
       <Community />
       <Tickets />
